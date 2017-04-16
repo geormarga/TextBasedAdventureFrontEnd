@@ -1,0 +1,1 @@
+angular.module('TBA', ['ui.router', 'ngMaterial']);

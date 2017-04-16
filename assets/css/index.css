@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    background-color:  black;
+    text-decoration-color: #FF7F27;
+}
+.action {
+    font-size: 60px;
+    font-family: fantasy;
+}
+.button{
+    text-decoration: none; 
+    color: #FF7F27;
+    font-family: fantasy;
+    background-color: black;
+}
+
+.button:hover{
+    border-style:solid;
+}
+label{
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    color: #FF7F27;
+    font-family: fantasy;
+}
+.input-text{
+    color: #FF7F27;
+    width: 100px;
+    background-color: black;
+}
