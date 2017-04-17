@@ -1,22 +1,14 @@
 <div ng-controller="SidenavController">
     <md-sidenav md-component-id="left" md-is-open="isSidenavOpen">
         <div class="sidenav-button-div">
-            <md-button id="outerNavButton" ng-click="toggleMenu()">HERE</md-button>
+            <md-button id="outerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
         </div>
-        <div class="action">
-            <div class="list-entry"><a class="button" ui-sref="unauthorized.play" id="play"
-                                       ng-controller="PlayController">Play</a>
-            </div>
-            <div class="list-entry"><a class="button" ui-sref="unauthorized.login" id="login"
-                                       ng-controller="LoginController">Login</a>
-            </div>
-            <div class="list-entry"><a class="button" ui-sref="unauthorized.register" id="register"
-                                       ng-controller="RegisterController">Register</a>
-            </div>
-        </div>
+        <a class="button" ui-sref="unauthorized.play" id="play" ng-controller="PlayController">Play</a>
+        <a class="button" ui-sref="unauthorized.login" id="login" ng-controller="LoginController">Login</a>
+        <a class="button" ui-sref="unauthorized.register" id="register" ng-controller="RegisterController">Register</a>
     </md-sidenav>
     <div class="sidenav-button-div">
-        <md-button id="innerNavButton" ng-click="toggleMenu()">HERE</md-button>
+        <md-button id="innerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
     </div>
     <md-content ui-view></md-content>
 </div>
