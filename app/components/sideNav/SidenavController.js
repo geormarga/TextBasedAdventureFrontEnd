@@ -7,10 +7,10 @@
     function SidenavController($scope, $mdSidenav) {
 
         $scope.isSidenavOpen = false;
-        $scope.openLeftMenu = openLeftMenu;
+        $scope.toggleMenu = toggleMenu;
 
-        function openLeftMenu() {
+        function toggleMenu() {
             $mdSidenav('left').toggle();
-        };
+        }
     }
 })();

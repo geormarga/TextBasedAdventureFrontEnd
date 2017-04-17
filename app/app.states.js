@@ -12,7 +12,7 @@ angular.module('TBA')
                 controller: 'TasksController',
                 controllerAs: 'tasksVm'
             })
-            .state('unauthorized.sidenav', {
+            .state('sidenav', {
                 url: 'sidenav',
                 templateUrl: 'app/components/sideNav/sideNav.html',
                 controller: 'SidenavController',
