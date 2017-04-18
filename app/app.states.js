@@ -7,33 +7,100 @@ angular.module('TBA')
         // Now set up the states
         $stateProvider
             .state('unauthorized', {
-                url: '/',
-                templateUrl: 'app/components/unauthorized/tasks/tasksView.html',
-                controller: 'TasksController',
-                controllerAs: 'tasksVm'
+                url: '/guest',
+                views: {
+                    'sidenav': {
+                        templateUrl: 'app/components/unauthorized/Unauthorized.html'
+                    },
+                    'content': {}
+                }
             })
-            .state('unauthorized.sidenav', {
-                url: 'sidenav',
-                templateUrl: 'app/components/sideNav/sideNav.html',
-                controller: 'SidenavController',
-                controllerAs: 'sidenavVm'
+            .state('authorized', {
+                url: '/user',
+                views: {
+                    'sidenav': {
+                        templateUrl: 'app/components/authorized/Authorized.html'
+                    }
+                }
             })
             .state('unauthorized.play', {
-                url: 'play',
-                templateUrl: 'app/components/play/playView.html',
-                controller: 'PlayController',
-                controllerAs: 'playVm'
+                url: '/play',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/play/playView.html',
+                        controller: 'PlayController',
+                        controllerAs: 'playVm'
+                    }
+                }
             })
             .state('unauthorized.login', {
-                url: 'login',
-                templateUrl: 'app/components/unauthorized/login/loginView.html',
-                controller: 'LoginController',
-                controllerAs: 'loginVm'
+                url: '/login',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/unauthorized/login/loginView.html',
+                        controller: 'LoginController',
+                        controllerAs: 'loginVm'
+                    }
+                }
             })
             .state('unauthorized.register', {
-                url: 'register',
-                templateUrl: 'app/components/unauthorized/register/registerView.html',
-                controller: 'RegisterController',
-                controllerAs: 'registerVm'
+                url: '/register',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/unauthorized/register/registerView.html',
+                        controller: 'RegisterController',
+                        controllerAs: 'registerVm'
+                    }
+                }
+            })
+            .state('authorized.play', {
+                url: '/play',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/play/playView.html',
+                        controller: 'PlayController',
+                        controllerAs: 'playVm'
+                    }
+                }
+            })
+            .state('authorized.save', {
+                url: '/save',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/authorized/save/saveView.html',
+                        controller: 'SaveController',
+                        controllerAs: 'saveVm'
+                    }
+                }
+            })
+            .state('authorized.load', {
+                url: '/load',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/authorized/load/loadView.html',
+                        controller: 'LoadController',
+                        controllerAs: 'loadVm'
+                    }
+                }
+            })
+            .state('authorized.change-password', {
+                url: '/change-password',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/authorized/changePassword/changePasswordView.html',
+                        controller: 'ChangePasswordController',
+                        controllerAs: 'chgpwdVm'
+                    }
+                }
+            })
+            .state('authorized.logout', {
+                url: '/logout',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/authorized/logout/logoutView.html',
+                        controller: 'LogoutController',
+                        controllerAs: 'logoutVm'
+                    }
+                }
             })
     });

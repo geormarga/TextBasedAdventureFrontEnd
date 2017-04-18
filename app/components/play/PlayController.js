@@ -1,11 +1,11 @@
 (function () {
     'use strict';
-    angular     
+    angular
         .module('TBA')
         .controller('PlayController', PlayController);
 
     function PlayController() {
-    
-    
-    } 
+
+
+    }
 })();
