@@ -93,4 +93,14 @@ angular.module('TBA')
                     }
                 }
             })
+            .state('authorized.logout', {
+                url: '/logout',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/components/authorized/logout/logoutView.html',
+                        controller: 'LogoutController',
+                        controllerAs: 'logoutVm'
+                    }
+                }
+            })
     });

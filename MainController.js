@@ -2,9 +2,9 @@
     'use strict';
     angular
         .module('TBA')
-        .controller('SidenavController', SidenavController);
+        .controller('MainController', MainController);
 
-    function SidenavController($scope, $mdSidenav) {
+    function MainController($scope, $mdSidenav) {
 
         $scope.isSidenavOpen = false;
         $scope.toggleMenu = toggleMenu;
