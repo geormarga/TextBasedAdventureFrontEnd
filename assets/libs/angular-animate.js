@@ -541,7 +541,7 @@ var ANIMATE_TIMER_KEY = '$$animateCss';
  * <div ng-if="onOff" class="fold-animation">
  *   This element will go BOOM
  * </div>
- * <button ng-click="onOff=true">Fold In</button>
+ * <sidenav-list-entry ng-click="onOff=true">Fold In</sidenav-list-entry>
  * ```
  *
  * Now we create the **JavaScript animation** that will trigger the CSS transition:
