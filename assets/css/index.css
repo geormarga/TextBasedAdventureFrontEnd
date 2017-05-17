@@ -4,13 +4,13 @@ body {
     text-decoration-color: #FF7F27;
 }
 
-.button:hover {
+.sidenav-list-entry:hover {
     color: black;
     background-color: #FF7F27;
 }
 
-.button {
-    font-size: 60px;
+.sidenav-list-entry {
+    font-size: 2.3vw;
     border: none;
     display: block;
     text-decoration: none;
@@ -20,9 +20,8 @@ body {
 }
 
 md-sidenav {
-    height: 100%;
     color: black;
-    background-color: black;;
+    background-color: black;
     box-shadow: 10px 10px 5px #888888;
 }
 
@@ -32,17 +31,23 @@ md-content {
 }
 
 .sidenav-button-div {
-    overflow: auto;
+    overflow: hidden;
 }
 
-#outerNavButton, #innerNavButton {
+.sidenav-button {
     min-height: 0;
     min-width: 0;
+    padding: 0px 10px 0px 10px;
     display: inline-block;
     text-align: center;
     font-size: 3em;
     color: #FF7F27;
     background-color: black;
+}
+
+.sidenav-button:hover {
+    color: black;
+    background-color: #FF7F27;
 }
 
 #outerNavButton {
