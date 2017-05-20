@@ -28,7 +28,7 @@
 <div ng-controller="MainController">
     <md-sidenav md-component-id="left" md-is-open="isSidenavOpen">
         <div class="sidenav-button-div">
-            <md-button class="sidenav-button" id="outerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
+            <md-button tabindex="0" class="sidenav-button" id="outerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
         </div>
         <div ui-view="sidenav"></div>
     </md-sidenav>
