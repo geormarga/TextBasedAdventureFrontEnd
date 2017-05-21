@@ -1,0 +1,23 @@
+#register-form{
+    width: 25%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#register-form label{
+    clear: both;
+    float: left;
+    display: block;
+    position: relative;
+}
+
+#register-form input[class="input-text"]{
+    display: inline-block;
+    float: right;
+}
+#register-form input[type="submit"]{
+    margin: 0 auto;
+    clear: both;
+    display: block;
+}
