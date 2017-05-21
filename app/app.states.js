@@ -2,7 +2,7 @@ angular.module('TBA')
     .config(function ($stateProvider, $urlRouterProvider) {
 
         // For any unmatched url, redirect to /
-        $urlRouterProvider.otherwise("/");
+        $urlRouterProvider.otherwise("/guest");
 
         // Now set up the states
         $stateProvider

@@ -38,7 +38,7 @@
  * | {@link ng.directive:ngHide ngHide}          | aria-hidden                                                                            |
  * | {@link ng.directive:ngDblclick ngDblclick}  | tabindex                                                                               |
  * | {@link module:ngMessages ngMessages}        | aria-live                                                                              |
- * | {@link ng.directive:ngClick ngClick}        | tabindex, keypress event, button role                                                  |
+ * | {@link ng.directive:ngClick ngClick}        | tabindex, keypress event, sidenav-list-entry role                                                  |
  *
  * Find out more information about each directive by reading the
  * {@link guide/accessibility ngAria Developer Guide}.
@@ -123,7 +123,7 @@ function $AriaProvider() {
    *  - **tabindex** – `{boolean}` – Enables/disables tabindex tags
    *  - **bindKeypress** – `{boolean}` – Enables/disables keypress event binding on `div` and
    *    `li` elements with ng-click
-   *  - **bindRoleForClick** – `{boolean}` – Adds role=button to non-interactive elements like `div`
+   *  - **bindRoleForClick** – `{boolean}` – Adds role=sidenav-list-entry to non-interactive elements like `div`
    *    using ng-click, making them more accessible to users of assistive technologies
    *
    * @description
