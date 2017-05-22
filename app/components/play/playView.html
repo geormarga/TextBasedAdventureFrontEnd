@@ -1,13 +1,14 @@
-<div id="history">
-    <div id="gameHistory">
-        <p>Here come some executed commands</p>
-        <p> start game</p>
-        <p> description</p>
-        <p> takis</p>
-        <p> No such command</p>
-    </div>
+<div id="play-container" ng-controller="PlayController">
+<textarea readonly id="history">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at convallis quam.
+    Sed ut odio turpis. Curabitur sagittis risus eget vestibulum blandit. Duis fermentum
+    venenatis mi gravida tempus. Nullam id volutpat nibh. Cras vehicula pulvinar efficitur.
+    Vivamus at nunc maximus sapien posuere sagittis. Aenean sed tortor consectetur dolor
+    facilisis egestas. Nam vestibulum a justo id pharetra. In bibendum, lacus eu iaculis tempor,
+    lorem magna congue dolor, ac malesuada eros quam et tellus.
+</textarea>
     <div id="command-bar">
-        <input type="text">
-        <button><span class="glyphicon glyphicon-arrow-right"></span></button>
+        <input for="execute" type="text">
+        <button id="execute" onclick="vm.executeCommand"><span class="glyphicon glyphicon-arrow-right"></span></button>
     </div>
 </div>

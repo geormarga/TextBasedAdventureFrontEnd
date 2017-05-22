@@ -1,8 +1,35 @@
+#play-container {
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    overflow: hidden;
+    margin: auto;
+}
+
 #history {
-    width: 60%;
-    height: 60%;
-    border: double;
+    width: 100%;
+    height: 90%;
+    resize: none;
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+    vertical-align:middle;
+}
+
+#history:focus {
+    outline: none;
 }
 
 #command-bar {
+    margin: auto;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+}
+
+#command-bar input {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
 }
