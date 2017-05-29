@@ -1,24 +1,23 @@
-<link rel="stylesheet" type="text/css" href="assets/css/registerView.css">
+<link rel="stylesheet" type="text/css" href="app/components/unauthorized/register/registerView.css">
 
-<style></style>
-<form id="register-form">
+<form id="register-form" ng-controller="RegisterController">
     <div>
         <label for="username">Username:</label>
-        <input id="username" class="input-text" type="text">
+        <input ng-model="username" id="username" class="input-text" type="text">
     </div>
     <div>
         <label for="email">E-mail:</label>
-        <input id="email" class="input-text" type="text">
+        <input ng-model="email" id="email" class="input-text" type="text">
     </div>
     <div>
         <label for="password">Password:</label>
-        <input id="password" class="input-text" type="password">
+        <input ng-model="password" id="password" class="input-text" type="password">
     </div>
     <div>
-        <label>Confirm Password:</label>
-        <input class="input-text" type="password">
+        <label for="retypePassword">Confirm Password:</label>
+        <input ng-model="retypePassword" id="retypePassword" class="input-text" type="password">
     </div>
     <div>
-        <input type="submit" value="Register">
+        <input type="submit" ng-click="register()" value="Register">
     </div>
 </form>

@@ -4,16 +4,19 @@
         .module('TBA')
         .controller('PlayController', PlayController);
 
-    PlayController.$inject = ['$scope'];
-
-    function PlayController() {
-        var vm = this;
-        vm.executeCommand = executeCommand();
-
-
-        function executeCommand() {
-            alert('clicked a button');
+    function PlayController($scope) {
+        
+        $scope.executeCommand = executeCommand;
+        $scope.history = "";
+        $scope.command = "";
+        
+        function executeCommand(){
+            appendText();
         }
-    }
-
+        
+        function appendText() {
+            $scope.history += $scope.command + "\n" ;
+            $scope.command = "";
+            document.getElementById('history').scrollTop = document.getElementById('history').scrollHeight;
+        }}
 })();

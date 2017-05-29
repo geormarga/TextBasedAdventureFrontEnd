@@ -1,15 +1,29 @@
-<link rel="stylesheet" type="text/css" href="assets/css/loginView.css">
 
-<form id="login-form">
+<link rel="stylesheet" type="text/css" href="app/components/unauthorized/login/loginView.css">
+
+<style>
+#register-form label {
+  display: inline-block;
+  width: 180px;
+  text-align: right;
+}
+#login-form {
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+</style>
+<form id="login-form" ng-controller="LoginController">
     <div>
         <label for="username">Username</label>
-        <input id="username" class="input-text" type="text">
+        <input ng-model="username" id="username" class="input-text" type="text">
     </div>
     <div>
         <label for="password">Password</label>
-        <input id="password" class="input-text" type="password">
+        <input ng-model="password" id="password" class="input-text" type="password">
     </div>
     <div>
-        <input type="submit" value="Login">
+        <input type="submit" ng-click="login()" value="Login">
     </div>
 </form>

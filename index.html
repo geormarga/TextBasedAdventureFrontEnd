@@ -1,41 +1,39 @@
 <html>
-<head>
-    <script src="assets/libs/angular.min.js"></script>
-    <script src="assets/libs/angular-ui-router.min.js"></script>
-    <script src="assets/libs/angular-material.min.js"></script>
-    <script src="assets/libs/angular-aria.js"></script>
-    <script src="assets/libs/angular-animate.js"></script>
-    <script src="app/app.module.js"></script>
-    <script src="app/app.states.js"></script>
+    <head>
+        <script src="assets/libs/angular.min.js"></script>
+        <script src="assets/libs/angular-ui-router.min.js"></script>
+        <script src="assets/libs/angular-material.min.js"></script>
+        <script src="assets/libs/angular-aria.js"></script>
+        <script src="assets/libs/angular-animate.js"></script>
+        <script src="app/app.module.js"></script>
+        <script src="app/app.states.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <script src="app/components/authorized/save/SaveController.js"></script>
-    <script src="app/components/authorized/load/LoadController.js"></script>
-    <script src="app/components/authorized/changePassword/ChangePasswordController.js"></script>
-    <script src="app/components/authorized/logout/LogoutController.js"></script>
-    <script src="app/components/unauthorized/login/LoginController.js"></script>
-    <script src="app/components/unauthorized/register/RegisterController.js"></script>
-    <script src="app/components/play/PlayController.js"></script>
-    <script src="MainController.js"></script>
+        <script src="app/components/authorized/save/SaveController.js"></script>
+        <script src="app/components/authorized/load/LoadController.js"></script>
+        <script src="app/components/authorized/changePassword/ChangePasswordController.js"></script>
+        <script src="app/components/authorized/logout/LogoutController.js"></script>
+        <script src="app/components/unauthorized/login/LoginController.js"></script>
+        <script src="app/components/unauthorized/register/RegisterController.js"></script>
+        <script src="app/components/play/PlayController.js"></script>
+        <script src="MainController.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="app/components/play/playView.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/angular-material.min.css">
-
-</head>
-<body ng-app="TBA">
-<div ng-controller="MainController">
-    <md-sidenav md-component-id="left" md-is-open="isSidenavOpen">
-        <div class="sidenav-button-div">
-            <md-button tabindex="0" class="sidenav-button" id="outerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/angular-material.min.css">
+    </head>
+    <body ng-app="TBA">
+        <div ng-controller="MainController">
+            <md-sidenav md-component-id="left" md-is-open="isSidenavOpen">
+                <div class="sidenav-button-div">
+                    <md-button tabindex="0" class="sidenav-button" id="outerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
+                </div>
+                <div ui-view="sidenav"></div>
+            </md-sidenav>
+            <div class="sidenav-button-div">
+                <md-button class="sidenav-button" id="innerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
+            </div>
+            <md-content ui-view="content"></md-content>
         </div>
-        <div ui-view="sidenav"></div>
-    </md-sidenav>
-    <div class="sidenav-button-div">
-        <md-button class="sidenav-button" id="innerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
-    </div>
-    <md-content ui-view="content"></md-content>
-</div>
-</body>
+    </body>
 </html>
