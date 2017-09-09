@@ -63,26 +63,6 @@ angular.module('TBA')
                     }
                 }
             })
-            .state('authorized.save', {
-                url: '/save',
-                views: {
-                    'content@': {
-                        templateUrl: 'app/components/authorized/save/saveView.html',
-                        controller: 'SaveController',
-                        controllerAs: 'saveVm'
-                    }
-                }
-            })
-            .state('authorized.load', {
-                url: '/load',
-                views: {
-                    'content@': {
-                        templateUrl: 'app/components/authorized/load/loadView.html',
-                        controller: 'LoadController',
-                        controllerAs: 'loadVm'
-                    }
-                }
-            })
             .state('authorized.change-password', {
                 url: '/change-password',
                 views: {
@@ -90,16 +70,6 @@ angular.module('TBA')
                         templateUrl: 'app/components/authorized/changePassword/changePasswordView.html',
                         controller: 'ChangePasswordController',
                         controllerAs: 'chgpwdVm'
-                    }
-                }
-            })
-            .state('authorized.logout', {
-                url: '/logout',
-                views: {
-                    'content@': {
-                        templateUrl: 'app/components/authorized/logout/logoutView.html',
-                        controller: 'LogoutController',
-                        controllerAs: 'logoutVm'
                     }
                 }
             })
