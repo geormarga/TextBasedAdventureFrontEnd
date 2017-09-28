@@ -4,30 +4,34 @@
         .module('TBA')
         .controller('PlayController', PlayController);
 
-    function PlayController($scope,Restangular) {
+    function PlayController($scope,$rootScope , Restangular) {
 
         $scope.executeCommand = executeCommand;
-        $scope.history = "";
+
+        //Sets the first description in the textfield.
+        $scope.history = $rootScope.latestDescription;
         $scope.command = "";
 
 
-        Restangular.configuration.setBaseUrl = "https://jsonplaceholder.typicode.com";
-
         function executeCommand() {
-
             appendText();
+            getDescription();
         }
 
         function appendText() {
             $scope.history += $scope.command + "\n";
+            //Post request with command values
             $scope.command = "";
-            var talos =Restangular.one('accounts').get();
-            talos.getList().then(function(talos) {
-                $scope.history += talos;
+        }
+
+        function getDescription() {
+            var responseList = Restangular.oneUrl('posts', 'https://jsonplaceholder.typicode.com/posts').get();
+
+            responseList.then(function (list) {
+                $rootScope.latestDescription = list[0].title + "\n";
+                $scope.history +=  $rootScope.latestDescription;
+                document.getElementById('history').scrollTop = document.getElementById('history').scrollHeight;
             });
-            console.log(talos);
-            $scope.history += $scope.accounts[0];
-            document.getElementById('history').scrollTop = document.getElementById('history').scrollHeight;
         }
     }
 })();
