@@ -1,7 +1,11 @@
 <html>
 <head>
+    <meta charset="utf-8"/>
     <script src="assets/libs/angular.min.js"></script>
     <script src="assets/libs/angular-ui-router.min.js"></script>
+    <script src="assets/libs/lodash.min.js"></script>
+    <script src="assets/libs/restangular.min.js"></script>
+
     <script src="assets/libs/angular-material.min.js"></script>
     <script src="assets/libs/angular-aria.js"></script>
     <script src="assets/libs/angular-animate.js"></script>
@@ -20,15 +24,14 @@
     <script src="MainController.js"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="app/components/play/playView.css">
     <link rel="stylesheet" type="text/css" href="assets/css/angular-material.min.css">
-
 </head>
 <body ng-app="TBA">
 <div ng-controller="MainController">
     <md-sidenav md-component-id="left" md-is-open="isSidenavOpen">
         <div class="sidenav-button-div">
-            <md-button tabindex="0" class="sidenav-button" id="outerNavButton" ng-click="toggleMenu()">&#x2261;</md-button>
+            <md-button tabindex="0" class="sidenav-button" id="outerNavButton" ng-click="toggleMenu()">&#x2261;
+            </md-button>
         </div>
         <div ui-view="sidenav"></div>
     </md-sidenav>

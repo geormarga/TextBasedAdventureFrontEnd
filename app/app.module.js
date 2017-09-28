@@ -1,1 +1,1 @@
-angular.module('TBA', ['ui.router', 'ngMaterial']);
+angular.module('TBA', ['ui.router', 'ngMaterial', 'restangular']);
