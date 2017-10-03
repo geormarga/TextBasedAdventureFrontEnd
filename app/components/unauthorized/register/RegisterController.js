@@ -5,23 +5,25 @@
         .module('TBA')
         .controller('RegisterController', RegisterController);
 
-    function RegisterController($scope) {
-    
-        $scope.register = register;
-        $scope.username = "";
-        $scope.email = "";
-        $scope.password = "";
-        $scope.retypePassword = "";
+    function RegisterController() {
+
+        var vm = this;
+
+        vm.register = register;
+        vm.username = "";
+        vm.email = "";
+        vm.password = "";
+        vm.retypePassword = "";
         
         function validate(){
-            $scope.email = "";
-            return $scope.password === $scope.retypePassword;
+            vm.email = "";
+            return vm.password === vm.retypePassword;
         }
         
         function register() {
-            $scope.username = "";
-            $scope.email = "";
-            $scope.password = "";
-            $scope.retypePassword = "";
+            vm.username = "";
+            vm.email = "";
+            vm.password = "";
+            vm.retypePassword = "";
         }}
 })();

@@ -1,19 +1,20 @@
 (function () {
     'use strict';
-    angular     
+    angular
         .module('TBA')
         .controller('LoginController', LoginController);
 
-    function LoginController($scope) {
-    
-        $scope.login = login;
-        $scope.username = "";
-        $scope.password = "";
-        
-        
-        function login() {
-            $scope.username = "";
-            $scope.password = "";
-        }}
+    function LoginController() {
+        var vm = this;
 
+        vm.login = login;
+
+        vm.username = "";
+        vm.password = "";
+
+        function login() {
+            vm.username = "";
+            vm.password = "";
+        }
+    }
 })();
