@@ -28,8 +28,7 @@ angular.module('TBA')
                 views: {
                     'content@': {
                         templateUrl: 'app/components/play/playView.html',
-                        controller: 'PlayController',
-                        controllerAs: 'playVm'
+                        controller: 'PlayController'
                     }
                 }
             })
@@ -38,8 +37,7 @@ angular.module('TBA')
                 views: {
                     'content@': {
                         templateUrl: 'app/components/unauthorized/login/loginView.html',
-                        controller: 'LoginController',
-                        controllerAs: 'loginVm'
+                        controller: 'LoginController'
                     }
                 }
             })
@@ -48,8 +46,7 @@ angular.module('TBA')
                 views: {
                     'content@': {
                         templateUrl: 'app/components/unauthorized/register/registerView.html',
-                        controller: 'RegisterController',
-                        controllerAs: 'registerVm'
+                        controller: 'RegisterController'
                     }
                 }
             })
@@ -58,8 +55,7 @@ angular.module('TBA')
                 views: {
                     'content@': {
                         templateUrl: 'app/components/play/playView.html',
-                        controller: 'PlayController',
-                        controllerAs: 'playVm'
+                        controller: 'PlayController'
                     }
                 }
             })
@@ -68,8 +64,7 @@ angular.module('TBA')
                 views: {
                     'content@': {
                         templateUrl: 'app/components/authorized/changePassword/changePasswordView.html',
-                        controller: 'ChangePasswordController',
-                        controllerAs: 'chgpwdVm'
+                        controller: 'ChangePasswordController'
                     }
                 }
             })
