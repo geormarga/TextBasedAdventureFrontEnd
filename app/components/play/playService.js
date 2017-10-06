@@ -11,8 +11,8 @@ function playService(Restangular) {
 
     function getDescription() {
         var responseList = Restangular.oneUrl('posts', 'https://jsonplaceholder.typicode.com/posts').get();
-        responseList.then(function (list) {
-            return list[0].title + "\n";
+        return responseList.then(function (list) {
+            return list[0].title;
         });
     }
 }
