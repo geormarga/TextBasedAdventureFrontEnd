@@ -6,7 +6,7 @@
     {{vm.history}}
 </textarea>
     <div id="command-bar">
-        <input for="execute" ng-model="vm.command" type="text">
-        <button id="execute"  ng-click="vm.executeCommand()" ><span class="glyphicon glyphicon-arrow-right"></span></button>
+        <input for="execute" my-enter="vm.executeCommand()" ng-model="vm.command" type="text" >
+        <button id="execute" ng-click="vm.executeCommand()" ><span class="glyphicon glyphicon-arrow-right"></span></button>
     </div>
 </div>
