@@ -4,19 +4,11 @@
         .module('TBA')
         .controller('MainController', MainController);
 
-    function MainController($scope, $rootScope, $mdSidenav, Restangular) {
+    function MainController($mdSidenav) {
+        var vm = this;
 
-        $scope.isSidenavOpen = false;
-        $scope.toggleMenu = toggleMenu;
-
-        $rootScope.latestDescription = "this is the first text ever \n";
-
-        function setLatestDescription() {
-            var responseList = Restangular.oneUrl('posts', 'https://jsonplaceholder.typicode.com/posts').get();
-            responseList.then(function (list) {
-                $rootScope.latestDescription = list[0].title + "\n";
-            });
-        }
+        vm.isSidenavOpen = false;
+        vm.toggleMenu = toggleMenu;
 
         function toggleMenu() {
             $mdSidenav('left').toggle();
