@@ -4,9 +4,11 @@
         .module('TBA')
         .controller('LoadController', LoadController);
 
-    function LoadController($scope, $state) {
+    function LoadController($state) {
 
-        $scope.load = load;
+        var vm = this;
+
+        vm.load = load;
 
         function load() {
             alert('Game loaded successfully');

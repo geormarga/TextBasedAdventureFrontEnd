@@ -4,34 +4,51 @@
         .module('TBA')
         .controller('PlayController', PlayController);
 
-    function PlayController($scope,$rootScope , Restangular) {
+    function PlayController(playService) {
 
-        $scope.executeCommand = executeCommand;
+        var vm = this;
+        vm.history = "";
+        vm.command = "";
+        vm.latestDescription;
 
-        //Sets the first description in the textfield.
-        $scope.history = $rootScope.latestDescription;
-        $scope.command = "";
+        vm.executeCommand = executeCommand;
 
+        InitializeHistoryTextarea();
 
         function executeCommand() {
-            appendText();
-            getDescription();
+            appendText(vm.command);
+            //Check if the command is either undefined, whitespace or empty string
+            if (validateCommandForWhitespace(vm.command)) {
+                getDescription().then(function (text) {
+                    vm.latestDescription = text;
+                    appendText(vm.latestDescription);
+                });
+            }
+            //Post request with command values
+            vm.command = "";
         }
 
-        function appendText() {
-            $scope.history += $scope.command + "\n";
-            //Post request with command values
-            $scope.command = "";
+        function appendText(text) {
+            vm.history += text + "\n";
+            document.getElementById('history').scrollTop = document.getElementById('history').scrollHeight;
         }
 
         function getDescription() {
-            var responseList = Restangular.oneUrl('posts', 'https://jsonplaceholder.typicode.com/posts').get();
-
-            responseList.then(function (list) {
-                $rootScope.latestDescription = list[0].title + "\n";
-                $scope.history +=  $rootScope.latestDescription;
-                document.getElementById('history').scrollTop = document.getElementById('history').scrollHeight;
+            return playService.getDescription().then(function (description) {
+                return vm.latestDescription = description;
             });
+        }
+
+        //Sets the first description in the textfield.
+        function InitializeHistoryTextarea() {
+            getDescription().then(function (text) {
+                vm.latestDescription = text;
+                appendText(vm.latestDescription);
+            });
+        }
+
+        function validateCommandForWhitespace(command) {
+            return command && command.trim();
         }
     }
 })();

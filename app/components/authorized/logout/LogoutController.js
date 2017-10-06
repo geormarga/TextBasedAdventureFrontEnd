@@ -4,9 +4,11 @@
         .module('TBA')
         .controller('LogoutController', LogoutController);
 
-    function LogoutController($scope,$state) {
+    function LogoutController($state) {
 
-        $scope.logout = logout;
+        var vm = this;
+
+        vm.logout = logout;
 
 
         function logout() {

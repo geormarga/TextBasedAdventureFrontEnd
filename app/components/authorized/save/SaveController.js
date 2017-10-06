@@ -5,9 +5,11 @@
         .module('TBA')
         .controller('SaveController', SaveController);
 
-    function SaveController($scope) {
+    function SaveController() {
 
-        $scope.save = save;
+        var vm = this;
+
+        vm.save = save;
 
         function save() {
             //saves and on success displays popup
