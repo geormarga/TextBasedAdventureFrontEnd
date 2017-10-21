@@ -1,6 +1,13 @@
+html{
+    --sidenav-text-color:#CE03CE;
+    --background-color: black;
+    --invert-sidenav-text-color: black;
+    --invert-background-color: #CE03CE;
+}
+
 a.sidenav-list-entry:hover {
-    color: var(--hover-text-color);
-    background-color: var(--hover-background-color);
+    color: var(--invert-sidenav-text-color);
+    background-color: var(--invert-background-color);
 }
 
 a.sidenav-list-entry:focus {
@@ -13,7 +20,7 @@ a.sidenav-list-entry {
     display: block;
     text-decoration: none;
     font-family: fantasy;
-    color: var(--text-color);
+    color: var(--sidenav-text-color);
 }
 
 md-sidenav {
@@ -32,13 +39,13 @@ md-sidenav {
     display: inline-block;
     text-align: center;
     font-size: 3em;
-    color: var(--text-color);
+    color: var(--sidenav-text-color);
     background-color: var(--background-color);
 }
 
 #outerNavButton:hover, #innerNavButton:hover {
-    color: var(--hover-text-color);
-    background: var(--hover-background-color);
+    color: var(--invert-sidenav-text-color);
+    background: var(--invert-background-color);
 }
 
 #outerNavButton {
