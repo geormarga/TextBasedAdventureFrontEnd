@@ -14,62 +14,11 @@ body {
     text-decoration-color: var(--text-color);
 }
 
-a.sidenav-list-entry:hover {
-    color: var(--hover-text-color);
-    background-color: var(--hover-background-color);
-}
-
-a.sidenav-list-entry:focus {
-    outline: none;
-}
-
-a.sidenav-list-entry {
-    font-size: 2.3vw;
-    border: none;
-    display: block;
-    text-decoration: none;
-    font-family: fantasy;
-    color: var(--text-color);
-}
-
-md-sidenav {
-    background-color: var(--background-color);
-    box-shadow: 10px 10px 5px #888888;
-}
-
 md-content {
     height: 100%;
     width: 100%;
     background-color: #808080;
     text-align: center;
-}
-
-.sidenav-button-div {
-    overflow: hidden;
-}
-
-.sidenav-button {
-    min-height: 0;
-    min-width: 0;
-    padding: 0 10px 0 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 3em;
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
-#outerNavButton:hover, #innerNavButton:hover {
-    color: var(--hover-text-color);
-    background: var(--hover-background-color);
-}
-
-#outerNavButton {
-    float: right;
-}
-
-#innerNavButton {
-    float: left;
 }
 
 label {
