@@ -1,5 +1,8 @@
 html {
     --text-color: #FF7F27;
+    --background-color: black;
+    --hover-text-color: black;
+    --hover-background-color: #FF7F27;
 }
 
 body {
@@ -12,8 +15,12 @@ body {
 }
 
 a.sidenav-list-entry:hover {
-    color: black;
-    background-color: #FF7F27;
+    color: var(--hover-text-color);
+    background-color: var(--hover-background-color);
+}
+
+a.sidenav-list-entry:focus {
+    outline: none;
 }
 
 a.sidenav-list-entry {
@@ -26,7 +33,7 @@ a.sidenav-list-entry {
 }
 
 md-sidenav {
-    background-color: black;
+    background-color: var(--background-color);
     box-shadow: 10px 10px 5px #888888;
 }
 
@@ -49,12 +56,12 @@ md-content {
     text-align: center;
     font-size: 3em;
     color: var(--text-color);
-    background-color: black;
+    background-color: var(--background-color);
 }
 
-.sidenav-button:hover {
-    color: black;
-    background-color: #FF7F27;
+#outerNavButton:hover, #innerNavButton:hover {
+    color: var(--hover-text-color);
+    background: var(--hover-background-color);
 }
 
 #outerNavButton {
