@@ -1,3 +1,8 @@
+html {
+    --play-text-color: #0079EA;
+    --play-background-color: black;
+}
+
 #play-container {
     width: 50%;
     height: 50%;
@@ -11,10 +16,13 @@
 #history {
     width: 100%;
     height: 90%;
+    outline: none;
     resize: none;
-    color: transparent;
     text-shadow: 0 0 0 #000;
-    vertical-align:middle;
+    vertical-align: middle;
+    border: none;
+    background: var(--play-background-color);
+    color: var(--play-text-color);
 }
 
 #history:focus {
@@ -28,8 +36,60 @@
     display: flex;
 }
 
+#command-bar:focus {
+    outline: none;
+}
+
 #command-bar input {
     position: relative;
     width: 100%;
     margin: 0 auto;
+    border: none;
+    background: var(--play-background-color);
+    color: var(--play-text-color);
+}
+
+#command-bar input:focus {
+    outline: none;
+}
+
+#execute{
+    color: var(--play-text-color);
+    border: none;
+    background: black;
+}
+
+#execute:focus{
+    outline:none;
+}
+
+.scrollbar
+{
+    float: left;
+    height: 300px;
+    width: 65px;
+    background: #F5F5F5;
+    overflow-y: scroll;
+}
+
+#history::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: var(--play-background-color);
+    border-radius: 5px;
+}
+
+#history::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: var(--play-background-color);
+}
+
+#history::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    background-image: -webkit-gradient(linear,
+    left bottom,
+    left top,
+    color-stop(1, var(--play-text-color)));
 }
