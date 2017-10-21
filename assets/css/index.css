@@ -1,10 +1,14 @@
+html {
+    --text-color: #FF7F27;
+}
+
 body {
     margin: 0;
     height: 100%;
     overflow: hidden;
     text-align: center;
     background-color: black;
-    text-decoration-color: #FF7F27;
+    text-decoration-color: var(--text-color);
 }
 
 a.sidenav-list-entry:hover {
@@ -18,7 +22,7 @@ a.sidenav-list-entry {
     display: block;
     text-decoration: none;
     font-family: fantasy;
-    color: #FF7F27;
+    color: var(--text-color);
 }
 
 md-sidenav {
@@ -44,7 +48,7 @@ md-content {
     display: inline-block;
     text-align: center;
     font-size: 3em;
-    color: #FF7F27;
+    color: var(--text-color);
     background-color: black;
 }
 
@@ -65,12 +69,15 @@ label {
     position: relative;
     text-align: left;
     font-size: 20px;
-    color: #FF7F27;
+    color: var(--text-color);
     font-family: fantasy;
 }
 
 .input-text {
-    color: #FF7F27;
+    color: var(--text-color);
     width: 100px;
-    background-color: black;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid var(--text-color);
 }
