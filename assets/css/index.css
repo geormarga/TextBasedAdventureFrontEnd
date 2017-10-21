@@ -1,4 +1,7 @@
 body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
     text-align: center;
     background-color: black;
     text-decoration-color: #FF7F27;
