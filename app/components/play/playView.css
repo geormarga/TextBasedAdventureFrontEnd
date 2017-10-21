@@ -63,15 +63,6 @@ html {
     outline:none;
 }
 
-.scrollbar
-{
-    float: left;
-    height: 300px;
-    width: 65px;
-    background: #F5F5F5;
-    overflow-y: scroll;
-}
-
 #history::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
