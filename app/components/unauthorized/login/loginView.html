@@ -1,12 +1,4 @@
-
-<link rel="stylesheet" type="text/css" href="app/components/unauthorized/login/loginView.css">
-
 <style>
-#register-form label {
-  display: inline-block;
-  width: 180px;
-  text-align: right;
-}
 #login-form {
     margin: 0 auto;
     position: relative;
@@ -16,14 +8,12 @@
 </style>
 <form id="login-form" ng-controller="LoginController as vm">
     <div>
-        <label for="username">Username</label>
-        <input ng-model="vm.username" id="username" class="input-text" type="text">
+        <input ng-model="vm.username" id="username" class="input-text form-item" placeholder="Username" type="text">
     </div>
     <div>
-        <label for="password">Password</label>
-        <input ng-model="vm.password" id="password" class="input-text" type="password">
+        <input ng-model="vm.password" id="password" class="input-text form-item" placeholder="Password" type="password">
     </div>
     <div>
-        <input type="submit" ng-click="vm.login($event)" value="Login">
+        <input type="submit" class="form-button form-item" ng-click="vm.login($event)" value="Login">
     </div>
 </form>
