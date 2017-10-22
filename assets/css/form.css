@@ -1,0 +1,43 @@
+html {
+    --text-color: #0079EA;
+}
+
+.form {
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-text {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.form-button {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+}
+
+.form input[type="submit"] {
+    margin: 0 auto;
+    clear: both;
+    display: block;
+}
+
+.form-button:focus {
+    outline: none;
+}
+
+.form-item {
+    margin: 5px;
+    width: 250px;
+    color: var(--text-color);
+}
+
+.input-text:focus {
+    background-color: transparent;
+}
