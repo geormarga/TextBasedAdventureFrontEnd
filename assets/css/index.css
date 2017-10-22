@@ -35,11 +35,17 @@ label {
 
 .form-button{
     background-color: transparent;
-    border: 1px 1px 1px 1px;
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+}
+
+.form-button:focus{
+    outline: none;
 }
 
 .form-item{
-    width: 100px;
+    margin: 5px;
+    width: 250px;
     color: var(--text-color);
 }
 
