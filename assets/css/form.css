@@ -16,13 +16,14 @@ html {
     border-bottom: 2px solid var(--text-color);
 }
 
-.form-button {
+.input-text:focus {
+    background: transparent;
+}
+
+.form .form-button {
     background-color: transparent;
     border: 2px solid var(--text-color);
     border-radius: 10px;
-}
-
-.form input[type="submit"] {
     margin: 0 auto;
     clear: both;
     display: block;
@@ -38,6 +39,8 @@ html {
     color: var(--text-color);
 }
 
-.input-text:focus {
-    background-color: transparent;
+.input-text:-webkit-autofill{
+    -webkit-transition-delay: 9999s;
+    -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
 }
+
