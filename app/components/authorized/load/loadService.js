@@ -1,0 +1,1 @@
+//Get latest state with get request that has username as param.
