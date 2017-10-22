@@ -2,20 +2,16 @@
 
 <form id="register-form" ng-controller="RegisterController">
     <div>
-        <label for="username">Username:</label>
-        <input ng-model="username" id="username" class="input-text" type="text">
+        <input ng-model="username" id="username" class="input-text" placeholder="Username" type="text">
     </div>
     <div>
-        <label for="email">E-mail:</label>
-        <input ng-model="email" id="email" class="input-text" type="text">
+        <input ng-model="email" id="email" class="input-text" placeholder="E-mail" type="text">
     </div>
     <div>
-        <label for="password">Password:</label>
-        <input ng-model="password" id="password" class="input-text" type="password">
+        <input ng-model="password" id="password" class="input-text" placeholder="Password" type="password">
     </div>
     <div>
-        <label for="retypePassword">Confirm Password:</label>
-        <input ng-model="retypePassword" id="retypePassword" class="input-text" type="password">
+        <input ng-model="retypePassword" id="retypePassword" class="input-text" placeholder="Confirm Password" type="password">
     </div>
     <div>
         <input type="submit" ng-click="register()" value="Register">
