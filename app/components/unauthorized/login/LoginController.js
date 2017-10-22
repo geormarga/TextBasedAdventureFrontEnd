@@ -32,7 +32,7 @@
                 $mdDialog.alert()
                     .parent(angular.element(document.querySelector('#main-view')))
                     .clickOutsideToClose(true)
-                    .textContent('Wrong username or password')
+                    .textContent('Wrong username or password!')
                     .ok('Okay')
                     .targetEvent(ev)
             );

@@ -1,0 +1,39 @@
+md-dialog{
+    background: var(--background-color) !important;
+}
+md-dialog h2 {
+    background: var(--sidenav-text-color) !important;
+    width: 100% !Important;
+    position: relative;
+    margin: 0px;
+    height: 20px;
+}
+
+md-dialog md-dialog-content {
+    padding: 0px !important;
+}
+
+md-dialog md-dialog-content p {
+    color: white;
+    text-align: center;
+    margin: 15px;
+}
+
+md-dialog-actions {
+    padding: 5px;
+    height: 40px;
+    min-height: 0px !important;
+}
+
+md-sidenav-list-entry {
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    outline: none;
+    padding: 0 20px 0 20px;
+}
