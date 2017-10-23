@@ -10,7 +10,7 @@ body {
 md-content {
     height: 100%;
     width: 100%;
-    //background-image: url(../img/background.jpg);
+    background-image: url(../img/background.png);
     text-align: center;
 }
 
