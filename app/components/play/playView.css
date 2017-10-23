@@ -23,6 +23,7 @@ html {
     border: none;
     background: var(--play-background-color);
     color: var(--play-text-color);
+    font-family: customFont;
 }
 
 #history:focus {
@@ -34,10 +35,14 @@ html {
     width: 100%;
     display: -webkit-flex;
     display: flex;
+    font-family: customFont;
 }
 
 #command-bar:focus {
     outline: none;
+}
+#command-bar input{
+    font-family: customFont;
 }
 
 #command-bar input {

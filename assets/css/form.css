@@ -37,6 +37,7 @@ html {
     margin: 5px;
     width: 250px;
     color: var(--text-color);
+    font-family: customFont;
 }
 
 .input-text:-webkit-autofill{

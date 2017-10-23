@@ -1,3 +1,9 @@
+@font-face {
+    font-family: customFont;
+    src: url(../fonts/Gidole-Regular.ttf);
+    //src: url(../fonts/Prime-Light.otf);
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -12,12 +18,4 @@ md-content {
     width: 100%;
     background-image: url(../img/background.png);
     text-align: center;
-}
-
-label {
-    position: relative;
-    text-align: left;
-    font-size: 20px;
-    color: var(--text-color);
-    font-family: fantasy;
 }

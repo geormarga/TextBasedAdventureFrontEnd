@@ -19,7 +19,7 @@ a.sidenav-list-entry {
     border: none;
     display: block;
     text-decoration: none;
-    font-family: fantasy;
+    font-family: customFont;
     color: var(--sidenav-text-color);
 }
 

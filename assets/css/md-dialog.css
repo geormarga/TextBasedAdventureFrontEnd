@@ -1,4 +1,5 @@
 md-dialog{
+    font-family: customFont;
     background: var(--background-color) !important;
 }
 md-dialog h2 {
