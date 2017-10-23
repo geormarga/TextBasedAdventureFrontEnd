@@ -1,73 +1,20 @@
+@font-face {
+    font-family: customFont;
+    src: url(../fonts/Gidole-Regular.ttf);
+}
+
 body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
     text-align: center;
     background-color: black;
-    text-decoration-color: #FF7F27;
-}
-
-a.sidenav-list-entry:hover {
-    color: black;
-    background-color: #FF7F27;
-}
-
-a.sidenav-list-entry {
-    font-size: 2.3vw;
-    border: none;
-    display: block;
-    text-decoration: none;
-    font-family: fantasy;
-    color: #FF7F27;
-}
-
-md-sidenav {
-    background-color: black;
-    box-shadow: 10px 10px 5px #888888;
+    text-decoration-color: var(--text-color);
 }
 
 md-content {
     height: 100%;
     width: 100%;
-    background-color: #808080;
+    background-image: url(../img/background.png);
     text-align: center;
-}
-
-.sidenav-button-div {
-    overflow: hidden;
-}
-
-.sidenav-button {
-    min-height: 0;
-    min-width: 0;
-    padding: 0 10px 0 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 3em;
-    color: #FF7F27;
-    background-color: black;
-}
-
-.sidenav-button:hover {
-    color: black;
-    background-color: #FF7F27;
-}
-
-#outerNavButton {
-    float: right;
-}
-
-#innerNavButton {
-    float: left;
-}
-
-label {
-    position: relative;
-    text-align: left;
-    font-size: 20px;
-    color: #FF7F27;
-    font-family: fantasy;
-}
-
-.input-text {
-    color: #FF7F27;
-    width: 100px;
-    background-color: black;
 }
