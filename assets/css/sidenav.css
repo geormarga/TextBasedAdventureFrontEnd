@@ -1,3 +1,8 @@
+@font-face {
+    font-family: sidenavFont;
+    src: url(../fonts/Prime-Light.otf);
+}
+
 html{
     --sidenav-text-color:#CE03CE;
     --background-color: black;
@@ -19,7 +24,7 @@ a.sidenav-list-entry {
     border: none;
     display: block;
     text-decoration: none;
-    font-family: customFont;
+    font-family: sidenavFont;
     color: var(--sidenav-text-color);
 }
 
@@ -46,6 +51,10 @@ md-sidenav {
 #outerNavButton:hover, #innerNavButton:hover {
     color: var(--invert-sidenav-text-color);
     background: var(--invert-background-color);
+}
+
+.sidenav-button:focus{
+    outline:none;
 }
 
 #outerNavButton {
