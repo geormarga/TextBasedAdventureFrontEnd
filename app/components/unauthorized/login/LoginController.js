@@ -4,7 +4,7 @@
         .module('TBA')
         .controller('LoginController', LoginController);
 
-    function LoginController(loginService,$state,$mdDialog) {
+    function LoginController(loginService, $state, alertFactory) {
         var vm = this;
 
         vm.login = login;
@@ -18,24 +18,10 @@
                 $state.go('authorized.play');
                 return success;
             }).catch(function (error) {
-                modalDialog(ev);
+                alertFactory.alert(ev, "Wrong username or password!");
             });
             vm.username = "";
             vm.password = "";
-        }
-
-        function modalDialog(ev) {
-            // Appending dialog to document.body to cover sidenav in docs app
-            // Modal dialogs should fully cover application
-            // to prevent interaction outside of dialog
-            $mdDialog.show(
-                $mdDialog.alert()
-                    .parent(angular.element(document.querySelector('#main-view')))
-                    .clickOutsideToClose(true)
-                    .textContent('Wrong username or password!')
-                    .ok('Okay')
-                    .targetEvent(ev)
-            );
         }
     }
 })();
