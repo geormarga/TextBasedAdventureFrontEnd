@@ -3,8 +3,8 @@
     src: url(../fonts/Prime-Light.otf);
 }
 
-html{
-    --sidenav-text-color:#CE03CE;
+html {
+    --sidenav-text-color: #CE03CE;
     --background-color: black;
     --invert-sidenav-text-color: black;
     --invert-background-color: #CE03CE;
@@ -45,16 +45,16 @@ md-sidenav {
     text-align: center;
     font-size: 3em;
     color: var(--sidenav-text-color);
-    background-color: var(--background-color);
+    background: var(--background-color);
 }
 
-#outerNavButton:hover, #innerNavButton:hover {
-    color: var(--invert-sidenav-text-color);
-    background: var(--invert-background-color);
+.sidenav-button:hover {
+    color: var(--invert-sidenav-text-color) !important;
+    background: var(--invert-background-color) !important;
 }
 
-.sidenav-button:focus{
-    outline:none;
+.sidenav-button:focus {
+    outline: none;
 }
 
 #outerNavButton {
