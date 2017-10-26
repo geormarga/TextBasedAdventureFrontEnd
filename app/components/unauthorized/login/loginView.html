@@ -1,11 +1,13 @@
 <form class="form" ng-controller="LoginController as vm">
     <div>
-        <input ng-model="vm.username" id="username" class="input-text form-item" placeholder="Username" type="text">
+        <input tabindex="0" ng-model="vm.username" id="username" class="input-text form-item" placeholder="Username"
+               type="text">
     </div>
     <div>
-        <input ng-model="vm.password" id="password" class="input-text form-item" placeholder="Password" type="password">
+        <input tabindex="0" ng-model="vm.password" id="password" class="input-text form-item" placeholder="Password"
+               type="password">
     </div>
     <div>
-        <input type="submit" class="form-button form-item" ng-click="vm.login($event)" value="Login">
+        <input tabindex="0" type="submit" class="form-button form-item" ng-click="vm.login($event)" value="Login">
     </div>
 </form>

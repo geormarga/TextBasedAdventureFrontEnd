@@ -1,18 +1,22 @@
 <form class="form" ng-controller="RegisterController as vm">
     <div>
-        <input ng-model="vm.username" id="username" class="input-text form-item" placeholder="Username" type="text">
+        <input tabindex="0" ng-model="vm.username" id="username" class="input-text form-item" placeholder="Username"
+               type="text">
     </div>
     <div>
-        <input ng-model="vm.email" id="email" class="input-text form-item" placeholder="E-mail" type="text">
+        <input tabindex="0" ng-model="vm.email" id="email" class="input-text form-item" placeholder="E-mail"
+               type="text">
     </div>
     <div>
-        <input ng-model="vm.password" id="password" class="input-text form-item" placeholder="Password" type="password">
-    </div>
-    <div>
-        <input ng-model="vm.retypePassword" id="retypePassword" class="input-text form-item" placeholder="Confirm Password"
+        <input tabindex="0" ng-model="vm.password" id="password" class="input-text form-item" placeholder="Password"
                type="password">
     </div>
     <div>
-        <input type="submit" class="form-button form-item" ng-click="vm.register($event)" value="Register">
+        <input tabindex="0" ng-model="vm.retypePassword" id="retypePassword" class="input-text form-item"
+               placeholder="Confirm Password"
+               type="password">
+    </div>
+    <div>
+        <input tabindex="0" type="submit" class="form-button form-item" ng-click="vm.register($event)" value="Register">
     </div>
 </form>
