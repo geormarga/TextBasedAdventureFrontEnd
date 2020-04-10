@@ -15,21 +15,23 @@
         vm.password = "";
         vm.retypePassword = "";
 
-        function validate() {
-            console.log(vm.password);
-            console.log(vm.retypePassword);
-            console.log(vm.password === vm.retypePassword);
-            return vm.password === vm.retypePassword;
+        function validatePassword(password, retypePassword) {
+            return password === retypePassword;
+        }
+
+        function validateEmail(email) {
+            return "".test();
         }
 
         function register(ev) {
-            if (!validate()) {
+            if (!validatePassword(vm.password, vm.retypePassword)) {
                 alertFactory.alert(ev, "Passwords do not match!");
+            } else {
+                vm.username = "";
+                vm.email = "";
+                vm.password = "";
+                vm.retypePassword = "";
             }
-            vm.username = "";
-            vm.email = "";
-            vm.password = "";
-            vm.retypePassword = "";
         }
     }
 })();
