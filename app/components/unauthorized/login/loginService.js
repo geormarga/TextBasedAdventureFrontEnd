@@ -26,8 +26,13 @@ function loginService(Restangular) {
             object = "";
         }
         var postCall = Restangular.oneUrl('posts', 'https://jsonplaceholder.typicode.com/posts').post(object);
-        return postCall.then(function (result) {
-            return result;
-        });
+        return postCall.then(
+            function (object) {
+                return object;
+            },
+            function (result) {
+                console.log("Something went wrong", result.status);
+                throw result.status;
+            });
     }
 }
