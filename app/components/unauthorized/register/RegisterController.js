@@ -1,11 +1,11 @@
 (function () {
     'use strict';
 
-    angular     
+    angular
         .module('TBA')
         .controller('RegisterController', RegisterController);
 
-    function RegisterController() {
+    function RegisterController(alertFactory) {
 
         var vm = this;
 
@@ -14,16 +14,24 @@
         vm.email = "";
         vm.password = "";
         vm.retypePassword = "";
-        
-        function validate(){
-            vm.email = "";
-            return vm.password === vm.retypePassword;
+
+        function validatePassword(password, retypePassword) {
+            return password === retypePassword;
         }
-        
-        function register() {
-            vm.username = "";
-            vm.email = "";
-            vm.password = "";
-            vm.retypePassword = "";
-        }}
+
+        function validateEmail(email) {
+            return "".test();
+        }
+
+        function register(ev) {
+            if (!validatePassword(vm.password, vm.retypePassword)) {
+                alertFactory.alert(ev, "Passwords do not match!");
+            } else {
+                vm.username = "";
+                vm.email = "";
+                vm.password = "";
+                vm.retypePassword = "";
+            }
+        }
+    }
 })();
